@@ -1,0 +1,8 @@
+# Ignore PDF booking confirmations containing personal information
+*.pdf
+Confirmation_for_Booking_ID_#_1760572916.pdf
+２日目宿.pdf
+レンタカー.pdf
+
+# Scratch directory
+scratch/

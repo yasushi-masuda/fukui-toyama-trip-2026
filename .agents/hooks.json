@@ -1,0 +1,60 @@
+{
+  "orgos-policy-gate": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/orgos-hooks.js pretool",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/orgos-hooks.js pretool",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/orgos-hooks.js pretool",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/orgos-hooks.js pretool",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "orgos-autopilot-gate": {
+    "enabled": false,
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .agents/scripts/orgos-hooks.js stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

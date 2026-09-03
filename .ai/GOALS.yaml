@@ -1,0 +1,27 @@
+vision:
+  id: V-001
+  title: "福井・富山 2泊3日レンタカー周遊旅行をスムーズかつ最高に楽しむ"
+  status: active
+  created_at: "2026-09-01 21:15:00 +09:00"
+  updated_at: "2026-09-01 21:15:00 +09:00"
+
+milestones:
+  - id: M-001
+    title: "Web旅程表・しおりの完成と旅行準備完了"
+    status: active
+    vision_id: V-001
+    created_at: "2026-09-01 21:15:00 +09:00"
+    deps: []
+
+projects:
+  - id: P-001
+    title: "福井・富山旅行 Web栞・スケジュール構築"
+    milestone_id: M-001
+    status: active
+    created_at: "2026-09-01 21:15:00 +09:00"
+
+history:
+  - date: "2026-09-01 21:15:00 +09:00"
+    type: "vision_created"
+    description: "初期ビジョン設定"
+    reason: "/org-start による初期化"

@@ -1,0 +1,58 @@
+# Task DAG (SSOT)
+#
+# status: queued | running | blocked | review | done
+# owner_role: org-planner / org-architect / org-reviewer / org-integrator / org-scribe など
+
+tasks:
+  - id: T-001
+    title: "プロジェクトのキックオフ・ヒアリング"
+    status: done
+    priority: P1
+    deps: []
+    owner_role: "org-planner"
+    allowed_paths:
+      - ".ai/"
+    acceptance:
+      - "BRIEF.md および PROJECT.md に要件・確定タイムラインが整理されている"
+    notes: "新幹線・宿・レンタカー・サウナテーマ確定"
+
+  - id: T-002
+    title: "Japanese Modern テイストのWeb栞（HTML初版）制作"
+    status: done
+    priority: P1
+    deps: ["T-001"]
+    owner_role: "org-architect"
+    allowed_paths:
+      - "index.html"
+    acceptance:
+      - "和モダンデザイン（藍鼠・金茶・茜色・明朝体）での美しいUI構築"
+      - "交通・宿・サウナ・チェックリストのインタラクティブ画面完成"
+    notes: "index.html 作成完了"
+
+  - id: T-003
+    title: "Google Maps保存リスト集約 ＆ 旅程・マップ組み込み"
+    status: done
+    priority: P1
+    deps: ["T-002"]
+    owner_role: "org-integrator"
+    allowed_paths:
+      - "index.html"
+      - ".ai/"
+    acceptance:
+      - "Google Maps保存リスト受け取り後、詳細スケジュール・立ち寄りスポットをindex.htmlに反映"
+    notes: "候補地全抽出・フィルタ・モデルタイムライン反映完了"
+
+  - id: T-004
+    title: "GitHub Pages でのWeb栞公開対応"
+    status: running
+    priority: P1
+    deps: ["T-003"]
+    owner_role: "org-integrator"
+    allowed_paths:
+      - ".gitignore"
+      - "index.html"
+      - ".ai/"
+    acceptance:
+      - "セキュリティ・個人情報（予約番号等）の保護方針決定"
+      - "GitHub リポジトリ設定と push、Pages 有効化手順の案内完了"
+    notes: "Ownerに公開方針とリポジトリURLを確認"

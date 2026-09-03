@@ -1,0 +1,11 @@
+# OrgOS Kernel Files
+# These files are protected from automatic modification.
+# Any OIP-AUTO that modifies these requires Level 3 (Owner explicit approval).
+#
+# Format: one file path per line (relative to repo root)
+# Lines starting with # are comments
+
+.agents/rules/knowledge/security.md
+.agents/rules/knowledge/review-criteria.md
+.agents/rules/project-flow.md
+.ai/CONTROL.yaml
