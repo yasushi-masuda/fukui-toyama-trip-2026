@@ -131,38 +131,53 @@
       z-index: 10;
     }
 
-    /* ナビゲーションタブ */
+    /* ナビゲーションタブ（スティッキー ＆ モバイル最適化） */
+    .nav-tabs-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-main);
+      padding: 10px 0 12px;
+      margin-top: -12px;
+      border-bottom: 1px solid rgba(220, 214, 205, 0.5);
+    }
+
     .nav-tabs {
       display: flex;
       background: var(--bg-card);
       border-radius: var(--radius);
-      padding: 6px;
-      gap: 4px;
+      padding: 5px;
+      gap: 6px;
       box-shadow: var(--shadow-md);
-      margin-bottom: 24px;
       border: 1px solid var(--color-border);
       overflow-x: auto;
+      overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .nav-tabs::-webkit-scrollbar {
+      display: none;
     }
 
     .tab-btn {
-      flex: 1;
-      min-width: 110px;
-      padding: 10px 12px;
+      flex: 0 0 auto; /* 縮ませない！重なりを完全防止 */
+      padding: 9px 14px;
       border: none;
       background: transparent;
       color: var(--color-text-muted);
-      font-family: var(--font-serif);
-      font-size: 0.88rem;
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
       font-weight: 600;
       cursor: pointer;
       border-radius: 8px;
-      transition: all 0.25s ease;
-      display: flex;
+      transition: all 0.2s ease;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
-      white-space: nowrap;
+      white-space: nowrap; /* テキスト改行・重なり完全防止 */
+      user-select: none;
     }
 
     .tab-btn:hover {
@@ -555,7 +570,7 @@
     <div class="hero-meta">
       <div class="hero-meta-item">
         <i class="fa-regular fa-calendar"></i>
-        <span>2026年9月20日(土) - 9月22日(月・祝)</span>
+        <span>2026年9月20日(日) - 9月22日(火・祝)</span>
       </div>
       <div class="hero-meta-item">
         <i class="fa-solid fa-car"></i>
@@ -571,30 +586,32 @@
   <!-- メインコンテナ -->
   <main class="container">
 
-    <!-- ナビゲーションタブ -->
-    <nav class="nav-tabs">
-      <button class="tab-btn active" onclick="switchTab('spots')">
-        <i class="fa-solid fa-thumbs-up"></i> メンバーの候補地
-      </button>
-      <button class="tab-btn" onclick="switchTab('timeline')">
-        <i class="fa-solid fa-map-location-dot"></i> 旅程・モデルルート
-      </button>
-      <button class="tab-btn" onclick="switchTab('transport')">
-        <i class="fa-solid fa-train-subway"></i> 交通・新幹線
-      </button>
-      <button class="tab-btn" onclick="switchTab('hotel')">
-        <i class="fa-solid fa-hotel"></i> 宿・滞在
-      </button>
-      <button class="tab-btn" onclick="switchTab('sauna')">
-        <i class="fa-solid fa-hot-tub-person"></i> サウナ＆整い
-      </button>
-      <button class="tab-btn" onclick="switchTab('checklist')">
-        <i class="fa-solid fa-list-check"></i> 持ち物・メモ
-      </button>
-    </nav>
+    <!-- ナビゲーションタブ（固定追従 ＆ モバイル横スクロール） -->
+    <div class="nav-tabs-wrapper">
+      <nav class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('timeline')">
+          <i class="fa-solid fa-route"></i> 旅程・ルート
+        </button>
+        <button class="tab-btn" onclick="switchTab('spots')">
+          <i class="fa-solid fa-map-pin"></i> 候補地リスト
+        </button>
+        <button class="tab-btn" onclick="switchTab('transport')">
+          <i class="fa-solid fa-train"></i> 交通・新幹線
+        </button>
+        <button class="tab-btn" onclick="switchTab('hotel')">
+          <i class="fa-solid fa-hotel"></i> 宿・外食
+        </button>
+        <button class="tab-btn" onclick="switchTab('sauna')">
+          <i class="fa-solid fa-hot-tub-person"></i> サウナ特集
+        </button>
+        <button class="tab-btn" onclick="switchTab('checklist')">
+          <i class="fa-solid fa-list-check"></i> 持ち物
+        </button>
+      </nav>
+    </div>
 
     <!-- 1. メンバーの候補地 タブ -->
-    <section id="spots" class="tab-content active">
+    <section id="spots" class="tab-content">
       
       <div class="card">
         <div class="card-header">
@@ -867,7 +884,7 @@
     </section>
 
     <!-- 2. 旅程・モデルルート タブ -->
-    <section id="timeline" class="tab-content">
+    <section id="timeline" class="tab-content active">
       
       <!-- 天気予報 ＆ 気候ガイドカード -->
       <div class="card" style="border-left: 4px solid #3182ce; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);">
@@ -943,7 +960,7 @@
         </div>
 
         <h3 style="font-family: var(--font-serif); color: var(--color-secondary); margin-bottom: 12px; font-size: 1.1rem;">
-          <i class="fa-solid fa-calendar-day"></i> 1日目: 2026/09/20 (土) 【福井奥越・勝山 ✕ 鮎 ✕ 片町夜飲み】
+          <i class="fa-solid fa-calendar-day"></i> 1日目: 2026/09/20 (日) 【福井奥越・勝山 ✕ 鮎 ✕ 片町夜飲み】
         </h3>
         
         <div class="timeline">
@@ -1027,7 +1044,7 @@
         </div>
 
         <h3 style="font-family: var(--font-serif); color: var(--color-secondary); margin-top: 28px; margin-bottom: 12px; font-size: 1.1rem;">
-          <i class="fa-solid fa-calendar-day"></i> 2日目: 2026/09/21 (日) 【朝の鮎 ➔ 絶景東尋坊 ➔ 富山へ ✕ 聖地スパアルプス ✕ Airbnb宅飲み】
+          <i class="fa-solid fa-calendar-day"></i> 2日目: 2026/09/21 (月・祝) 【朝の鮎 ➔ 絶景東尋坊 ➔ 富山へ ✕ 聖地スパアルプス ✕ Airbnb宅飲み】
         </h3>
 
         <div class="timeline">
@@ -1125,7 +1142,7 @@
         </div>
 
         <h3 style="font-family: var(--font-serif); color: var(--color-secondary); margin-top: 28px; margin-bottom: 12px; font-size: 1.1rem;">
-          <i class="fa-solid fa-calendar-day"></i> 3日目: 2026/09/22 (月・祝) 【黒部峡谷トロッコ or 立山 ✕ 美味い寿司 ➔ 帰京】
+          <i class="fa-solid fa-calendar-day"></i> 3日目: 2026/09/22 (火・祝) 【黒部峡谷トロッコ or 立山 ✕ 美味い寿司 ➔ 帰京】
         </h3>
 
         <div class="timeline">
@@ -1207,7 +1224,7 @@
         </div>
 
         <div class="transport-card">
-          <div class="transport-type">行き（往路）- 2026/09/20 (土)</div>
+          <div class="transport-type">行き（往路）- 2026/09/20 (日)</div>
           <div class="transport-main">かがやき 505号（9号車 5番D/E, 6番D/E）</div>
           <div class="transport-detail-grid">
             <div class="detail-row">
@@ -1230,7 +1247,7 @@
         </div>
 
         <div class="transport-card">
-          <div class="transport-type">帰り（復路）- 2026/09/22 (月・祝)</div>
+          <div class="transport-type">帰り（復路）- 2026/09/22 (火・祝)</div>
           <div class="transport-main">北陸新幹線（富山 ➔ 東京）</div>
           <div class="transport-detail-grid">
             <div class="detail-row">
@@ -1307,7 +1324,7 @@
           <h2 class="card-title">
             <i class="fa-solid fa-hotel"></i> 1日目宿泊：福井片町
           </h2>
-          <span class="card-tag">9/20 (土) NIGHT</span>
+          <span class="card-tag">9/20 (日) NIGHT</span>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -1338,7 +1355,7 @@
           <h2 class="card-title">
             <i class="fa-solid fa-house-chimney"></i> 2日目宿泊：富山一棟貸切
           </h2>
-          <span class="card-tag">9/21 (日) NIGHT</span>
+          <span class="card-tag">9/21 (月・祝) NIGHT</span>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 12px;">
