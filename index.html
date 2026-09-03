@@ -869,10 +869,75 @@
     <!-- 2. 旅程・モデルルート タブ -->
     <section id="timeline" class="tab-content">
       
+      <!-- 天気予報 ＆ 気候ガイドカード -->
+      <div class="card" style="border-left: 4px solid #3182ce; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);">
+        <div class="card-header">
+          <h2 class="card-title" style="color: #2b6cb0;">
+            <i class="fa-solid fa-cloud-sun-rain" style="color: #3182ce;"></i> 福井・富山 現地天気予報 ＆ 気候ガイド
+          </h2>
+          <span class="card-tag" style="background:#bee3f8; color:#2b6cb0; border-color:#90cdf4;">WEATHER & CLIMATE</span>
+        </div>
+        
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 12px;">
+          旅先の天気をリアルタイム＆ピンポイントでチェック！秋の北陸（9月下旬）は爽やかですが天気が変わりやすいため、事前確認が安心です。
+        </p>
+
+        <!-- リアルタイム天気バッジ（Open-Meteo API） -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 14px;">
+          
+          <div style="background: #ffffff; padding: 12px 14px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <span style="font-size: 0.85rem; font-weight: bold; color: var(--color-primary);"><i class="fa-solid fa-location-dot" style="color:#e53e3e;"></i> 福井エリア（1〜2日目）</span>
+              <span style="font-size: 0.75rem; color: #718096;">リアルタイム</span>
+            </div>
+            <div id="fukui-weather" style="font-size: 1rem; color: #4a5568; margin-bottom: 6px;">
+              <i class="fa-solid fa-spinner fa-spin"></i> 天気データ取得中...
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.75rem;">
+              <a href="https://tenki.jp/forecast/4/19/5710/18201/" target="_blank" class="btn-link" style="padding: 2px 8px; font-size: 0.75rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> tenki.jp 福井市
+              </a>
+              <a href="https://tenki.jp/forecast/4/19/5710/18206/" target="_blank" class="btn-link" style="padding: 2px 8px; font-size: 0.75rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> 勝山市(恐竜/鮎)
+              </a>
+              <a href="https://weathernews.jp/onebox/tenki/fukui/18210/" target="_blank" class="btn-link" style="padding: 2px 8px; font-size: 0.75rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> 東尋坊
+              </a>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; padding: 12px 14px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <span style="font-size: 0.85rem; font-weight: bold; color: var(--color-primary);"><i class="fa-solid fa-location-dot" style="color:#3182ce;"></i> 富山エリア（2〜3日目）</span>
+              <span style="font-size: 0.75rem; color: #718096;">リアルタイム</span>
+            </div>
+            <div id="toyama-weather" style="font-size: 1rem; color: #4a5568; margin-bottom: 6px;">
+              <i class="fa-solid fa-spinner fa-spin"></i> 天気データ取得中...
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.75rem;">
+              <a href="https://tenki.jp/forecast/4/18/5510/16201/" target="_blank" class="btn-link" style="padding: 2px 8px; font-size: 0.75rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> tenki.jp 富山市
+              </a>
+              <a href="https://tenki.jp/forecast/4/18/5510/16207/" target="_blank" class="btn-link" style="padding: 2px 8px; font-size: 0.75rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> 黒部峡谷(宇奈月)
+              </a>
+              <a href="https://weathernews.jp/onebox/tenki/toyama/" target="_blank" class="btn-link" style="padding: 2px 8px; font-size: 0.75rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> ウェザーニュース
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="background: rgba(49, 130, 206, 0.08); padding: 10px 12px; border-radius: 6px; font-size: 0.82rem; color: #2c5282;">
+          <i class="fa-solid fa-shirt"></i> <strong>9月下旬の服装・持ち物メモ:</strong> 日中は22〜26℃で快適ですが、朝晩や山間部（勝山・黒部トロッコ）は15〜18℃前後まで冷え込みます。薄手の羽織りもの（パーカーやジャケット）と、急な雨対策に折りたたみ傘をレンタカーに常備しておくと安心です。
+        </div>
+      </div>
+
       <div class="card">
         <div class="card-header">
           <h2 class="card-title">
-            <i class="fa-solid fa-route"></i> 2泊3日 モデルタイムライン案
+            <i class="fa-solid fa-route"></i> 2泊3日 モデルタイムライン案（マップ直結）
           </h2>
           <span class="card-tag">MODEL ROUTE</span>
         </div>
@@ -886,36 +951,78 @@
             <div class="timeline-time">08:11 ➔ 11:09</div>
             <div class="timeline-title">東京駅発 ➔ 福井駅着（かがやき505号）</div>
             <div class="timeline-desc">新幹線eチケットでスマート乗車。9号車5・6番。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=福井駅" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-location-dot"></i> 福井駅マップ
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">11:30</div>
             <div class="timeline-title">トヨタレンタカー 福井駅東口店 出発</div>
             <div class="timeline-desc">レンタカー手続き後、ドライブスタート！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=トヨタレンタカー+福井駅東口店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-location-dot"></i> トヨタレンタカー福井駅東口店
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">12:00 ➔ 13:15</div>
             <div class="timeline-title">【昼食】福井名物 越前そば（そば蔵 谷川 / 亀蔵）または ソースカツ丼</div>
             <div class="timeline-desc">福井駅周辺・越前エリアで、香り高い名物おろしそば または 発祥のソースカツ丼！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=そば蔵+谷川" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-utensils"></i> そば蔵 谷川
+              </a>
+              <a href="https://maps.google.com/?q=手打ち蕎麦+亀蔵" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-utensils"></i> 手打ち蕎麦 亀蔵
+              </a>
+              <a href="https://maps.google.com/?q=ヨーロッパ軒+総本店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-utensils"></i> ヨーロッパ軒 総本店
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">13:45 ➔ 17:15</div>
             <div class="timeline-title">福井県立恐竜博物館 ＆ 大師山清大寺（越前大仏）</div>
             <div class="timeline-desc">全員が行きたがっている勝山エリア2大巨頭！世界三大恐竜博物館 ＆ 圧巻の日本一巨大な大仏をたっぷり満喫。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=福井県立恐竜博物館" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-landmark"></i> 恐竜博物館マップ
+              </a>
+              <a href="https://maps.google.com/?q=越前大仏+大師山清大寺" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-monument"></i> 越前大仏マップ
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">18:00〜</div>
             <div class="timeline-title">アパホテル 福井片町 チェックイン ➔ ホテル内サウナ＆天然温泉で極上整い！</div>
             <div class="timeline-desc">ホテル直行でチェックイン！館内大浴場の本格サウナ＆天然温泉で初日ドライブの疲れを完全リセット。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=アパホテル+福井片町" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-hotel"></i> アパホテル 福井片町
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">19:30〜</div>
             <div class="timeline-title">片町繁華街へ繰り出し！夜の宴会＆飲み</div>
             <div class="timeline-desc">整った最高のコンディションで、ホテル目の前の片町繁華街へ！海鮮居酒屋（魚心など）・地酒で乾杯！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=福井市片町" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-beer-mug-empty"></i> 片町繁華街エリア
+              </a>
+              <a href="https://maps.google.com/?q=にぎり屋+魚心+福井" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-fish"></i> にぎり屋 魚心
+              </a>
+            </div>
           </div>
         </div>
 
@@ -928,42 +1035,92 @@
             <div class="timeline-time">08:30</div>
             <div class="timeline-title">福井片町 出発</div>
             <div class="timeline-desc">朝の清々しい空気の中、九頭竜川沿いへドライブ！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=アパホテル+福井片町" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-location-dot"></i> 出発地（アパホテル）
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">09:15 ➔ 10:30</div>
             <div class="timeline-title">【朝の鮎】石田おとり店（勝山・九頭竜川）</div>
             <div class="timeline-desc">増田熱望！朝イチで清流・九頭竜川の炭火焼き天然鮎の塩焼きを贅沢に味わう！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=石田おとり店+福井県勝山市鹿谷町" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-fish-fins"></i> 石田おとり店マップ
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">11:15 ➔ 12:45</div>
             <div class="timeline-title">東尋坊 絶景観光 ＆ 松岡軒の羽二重餅</div>
             <div class="timeline-desc">断崖絶壁の東尋坊散策と、やうじ食べたい名物羽二重餅！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=東尋坊" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-water"></i> 東尋坊マップ
+              </a>
+              <a href="https://maps.google.com/?q=松岡軒+福井" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-cookie"></i> 松岡軒 本店
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">13:30 ➔ 15:30</div>
             <div class="timeline-title">富山へ移動 ➔ 富山ブラックラーメン または Kobo Brew Pub</div>
             <div class="timeline-desc">富山へ移動し、念願の富山ブラックラーメン（麺家いろは / えびすこ等）を堪能！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=麺家いろは+射水本店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-bowl-rice"></i> 麺家いろは 射水本店
+              </a>
+              <a href="https://maps.google.com/?q=ラーメン一心+富山駅前本店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-bowl-rice"></i> ラーメン一心
+              </a>
+              <a href="https://maps.google.com/?q=KOBO+Brew+Pub+富山" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-beer-mug-empty"></i> KOBO Brew Pub
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">16:30 ➔ 18:30</div>
             <div class="timeline-title">★聖地 スパ・アルプスでガッツリ整い！</div>
             <div class="timeline-desc">北陸サウナの聖地スパ・アルプスへ。天然水水風呂と北欧サウナで最高にととのう。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=スパ・アルプス+富山" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-hot-tub-person"></i> スパ・アルプスマップ
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">19:00 ➔ 21:00</div>
             <div class="timeline-title">【夕飯・飲み】富山名物グルメ外食（すし玉掛尾本店 / 吟魚 / 漁師めしのと など）</div>
             <div class="timeline-desc">増田さん運転で富山湾の旬海鮮・極上寿司・地酒居酒屋へ外食！男4人で大満足ディナー！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=すし玉+富山掛尾本店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-fish"></i> すし玉 掛尾本店
+              </a>
+              <a href="https://maps.google.com/?q=漁師めしと地酒+のと+富山" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-utensils"></i> 漁師めしと地酒 のと
+              </a>
+              <a href="https://maps.google.com/?q=吟魚+富山" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-beer-mug-empty"></i> 吟魚
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">21:30〜</div>
             <div class="timeline-title">カルフールゲストハウス別館（Airbnb）帰着 ➔ まったり二次会宅飲み</div>
             <div class="timeline-desc">外食後、宿へ戻って買い出ししたお酒やおつまみで一棟貸切ならではの深夜トーク！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=富山市八日町128-3" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-house-chimney"></i> 宿マップ（八日町）
+              </a>
+            </div>
           </div>
         </div>
 
@@ -975,30 +1132,62 @@
           <div class="timeline-node">
             <div class="timeline-time">08:30</div>
             <div class="timeline-title">宿チェックアウト 出発</div>
+            <div class="timeline-desc">一棟貸切宿を出発し、最終日の観光へ！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=富山市八日町128-3" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-house-chimney"></i> 宿（八日町）
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">09:30 ➔ 13:30</div>
             <div class="timeline-title">黒部峡谷トロッコ電車（宇奈月） or 富山市ガラス美術館 ＆ 環水公園</div>
             <div class="timeline-desc">大自然のトロッコ電車旅（アルペンチーズケーキも！）または富山市内のスタイリッシュ観光。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=黒部峡谷鉄道+宇奈月駅" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-train"></i> 黒部峡谷トロッコ(宇奈月)
+              </a>
+              <a href="https://maps.google.com/?q=富山市ガラス美術館" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-building-columns"></i> 富山市ガラス美術館
+              </a>
+              <a href="https://maps.google.com/?q=富岩運河環水公園" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-tree"></i> 環水公園
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">14:00 ➔ 15:30</div>
             <div class="timeline-title">【遅めの昼食】廻る富山湾 すし玉（富山駅）または 吟魚</div>
             <div class="timeline-desc">きときとの富山湾寿司・白エビを堪能。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=すし玉+富山駅店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-fish"></i> すし玉 富山駅店
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">16:00</div>
             <div class="timeline-title">トヨタレンタカー 富山駅前店 返却</div>
             <div class="timeline-desc">返却完了後、富山駅でお土産選び・軽い乾杯。</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=トヨタレンタカー+富山駅前店" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-car"></i> トヨタレンタカー富山駅前店
+              </a>
+            </div>
           </div>
 
           <div class="timeline-node">
             <div class="timeline-time">17:29 ➔ 19:48</div>
             <div class="timeline-title">富山発 ──(北陸新幹線)──> 東京着</div>
             <div class="timeline-desc">お疲れ様でした！</div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+              <a href="https://maps.google.com/?q=富山駅" target="_blank" class="btn-link" style="padding: 3px 8px; font-size: 0.76rem;">
+                <i class="fa-solid fa-location-dot"></i> 富山駅マップ
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1550,6 +1739,49 @@
         parent.classList.remove('checked');
       }
     }
+
+    // リアルタイム天気情報取得（Open-Meteo API）
+    async function fetchWeather() {
+      try {
+        // 福井市 (36.064, 136.223) & 富山市 (36.695, 137.213)
+        const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=36.064,36.695&longitude=136.223,137.213&current=temperature_2m,weather_code&timezone=Asia%2FTokyo');
+        const data = await res.json();
+        if (Array.isArray(data) && data.length === 2) {
+          updateWeatherBadge('fukui-weather', data[0].current);
+          updateWeatherBadge('toyama-weather', data[1].current);
+        }
+      } catch (e) {
+        console.warn('Weather fetch error:', e);
+        const fukuiEl = document.getElementById('fukui-weather');
+        const toyamaEl = document.getElementById('toyama-weather');
+        if (fukuiEl) fukuiEl.innerHTML = '<span style="color:#718096; font-size:0.9rem;">最新予報は下のリンクから確認</span>';
+        if (toyamaEl) toyamaEl.innerHTML = '<span style="color:#718096; font-size:0.9rem;">最新予報は下のリンクから確認</span>';
+      }
+    }
+
+    function getWeatherInfo(code) {
+      if (code === 0) return { icon: 'fa-sun', text: '快晴', color: '#e53e3e' };
+      if (code <= 3) return { icon: 'fa-cloud-sun', text: '晴れ / 曇り', color: '#dd6b20' };
+      if (code <= 48) return { icon: 'fa-cloud', text: '曇り', color: '#718096' };
+      if (code <= 67) return { icon: 'fa-cloud-rain', text: '雨', color: '#3182ce' };
+      if (code <= 77) return { icon: 'fa-snowflake', text: '雪', color: '#63b3ed' };
+      return { icon: 'fa-cloud-showers-heavy', text: '雨', color: '#2b6cb0' };
+    }
+
+    function updateWeatherBadge(id, current) {
+      const el = document.getElementById(id);
+      if (!el || !current) return;
+      const w = getWeatherInfo(current.weather_code);
+      el.innerHTML = `
+        <div style="display:inline-flex; align-items:center; gap:8px; font-weight:700; color:${w.color};">
+          <i class="fa-solid ${w.icon}" style="font-size:1.2rem;"></i>
+          <span>${Math.round(current.temperature_2m)}℃</span>
+          <span style="font-size:0.85rem; background:#edf2f7; color:#4a5568; padding:2px 8px; border-radius:4px; font-weight:normal;">${w.text}</span>
+        </div>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchWeather);
   </script>
 </body>
 </html>
