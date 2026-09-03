@@ -1,11 +1,11 @@
 # STATUS — 進捗ログ
 
-## 2026-09-03 20:34 (+09:00)
+## 2026-09-03 20:37 (+09:00)
 
-- **Stage**: IMPLEMENTATION
-- **Event**: GitHub Pages 公開準備（機密情報マスク ＆ リポジトリ作成案内）
+- **Stage**: RELEASE
+- **Event**: GitHub リポジトリ（`fukui-toyama-trip-2026`）へ初期コミット＆push完了
 - **Action**:
-  - `index.html` 内の予約番号（新幹線、レンタカー、宿ID）を「手配完了 (幹事管理)」にマスクし、全体公開時の個人情報漏洩防止を実施
-  - `.gitignore` に `scratch/` を追加
-  - Owner へ GitHub 上でのリポジトリ作成手順を案内中
-- **Next**: Owner からの GitHub リポジトリ URL 共有待ち
+  - リモート `origin`（https://github.com/yasushi-masuda/fukui-toyama-trip-2026.git）を設定
+  - 個人情報PDF・scratchフォルダを除外した状態で `main` ブランチへプッシュ完了
+  - Owner へ GitHub Pages 有効化手順（URL: `https://yasushi-masuda.github.io/fukui-toyama-trip-2026/`）を案内
+- **Next**: Owner による GitHub Pages 有効化

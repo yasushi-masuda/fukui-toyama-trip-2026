@@ -8,26 +8,28 @@
 
 | 項目 | 状態 |
 |------|------|
-| Stage | **INTEGRATION / RELEASE** (GitHub Pages公開準備) |
-| Awaiting Owner | **YES** (GitHub リポジトリ作成・URL共有待ち) |
+| Stage | **RELEASE** (GitHub Pages 有効化待ち) |
+| Awaiting Owner | **YES** (GitHub Pages の有効化操作) |
 | Paused | NO |
 | IT Literacy | Intermediate (ふつう) |
 | Review Policy | Batch (最後にまとめて確認) |
 
 ---
 
-## 成果物
+## 成果物 ＆ リポジトリ
 
-- [📄 **`index.html` (福井・富山 旅のしおり - GitHub Pages公開対応版)**](file:///g:/%E3%83%9E%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88/%E6%97%85%E8%A1%8C/05_%E7%A6%8F%E4%BA%95%E3%83%BB%E5%AF%8C%E5%B1%B1%E6%97%85%E8%A1%8C/index.html)
-  - 新幹線・レンタカー・宿の予約番号を安全にマスク処理済み。
-  - すべての候補地、メンバーコメント、モデルタイムラインを完全反映。
+- **GitHub リポジトリ**: [https://github.com/yasushi-masuda/fukui-toyama-trip-2026](https://github.com/yasushi-masuda/fukui-toyama-trip-2026) (Push完了)
+- **GitHub Pages 公開 URL**:
+  👉 **`https://yasushi-masuda.github.io/fukui-toyama-trip-2026/`**
+  （※Settings > Pages で main ブランチを指定して保存すると有効化されます）
 
 ---
 
 ## Next Action (Owner)
 
-1. GitHub 上で新規リポジトリを作成してください（下記手順参照）。
-2. 作成したリポジトリの URL をこのチャットでお知らせください。
+1. [リポジトリの Pages 設定画面](https://github.com/yasushi-masuda/fukui-toyama-trip-2026/settings/pages) を開きます。
+2. **Branch** を `None` ➔ **`main`** に変更して **「Save」** を押してください。
+3. 数分後、上記 URL でスマホからしおりが表示されます！
 
 ---
 
@@ -41,6 +43,6 @@
 - [x] PROJECT.md（SSOT要件定義）作成
 - [x] Google Maps共有リスト解析・パース完了
 - [x] Japanese Modern Web栞 (index.html) スポット＆タイムライン反映完了
-- [x] **機密情報（予約番号等）のマスク処理完了**
-- [ ] GitHub リポジトリ作成 ＆ push
-- [ ] GitHub Pages 有効化（URL発行完了）
+- [x] 機密情報（予約番号等）のマスク処理完了
+- [x] **GitHub リポジトリへ push 完了**
+- [ ] GitHub Pages 有効化（Owner作業）

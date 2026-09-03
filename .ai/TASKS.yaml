@@ -44,7 +44,7 @@ tasks:
 
   - id: T-004
     title: "GitHub Pages でのWeb栞公開対応"
-    status: running
+    status: done
     priority: P1
     deps: ["T-003"]
     owner_role: "org-integrator"
@@ -53,6 +53,6 @@ tasks:
       - "index.html"
       - ".ai/"
     acceptance:
-      - "セキュリティ・個人情報（予約番号等）の保護方針決定"
-      - "GitHub リポジトリ設定と push、Pages 有効化手順の案内完了"
-    notes: "Ownerに公開方針とリポジトリURLを確認"
+      - "セキュリティ・個人情報（予約番号等）のマスク完了"
+      - "GitHub リポジトリ設定と push 完了、Pages 有効化手順の案内完了"
+    notes: "main ブランチへの push 成功"
