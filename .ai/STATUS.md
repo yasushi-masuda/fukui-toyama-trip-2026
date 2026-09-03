@@ -1,11 +1,13 @@
 # STATUS — 進捗ログ
 
-## 2026-09-03 20:37 (+09:00)
+## 2026-09-03 20:51 (+09:00)
 
 - **Stage**: RELEASE
-- **Event**: GitHub リポジトリ（`fukui-toyama-trip-2026`）へ初期コミット＆push完了
+- **Event**: 旅程の改善（石田おとり店を2日目の朝へ変更）
 - **Action**:
-  - リモート `origin`（https://github.com/yasushi-masuda/fukui-toyama-trip-2026.git）を設定
-  - 個人情報PDF・scratchフォルダを除外した状態で `main` ブランチへプッシュ完了
-  - Owner へ GitHub Pages 有効化手順（URL: `https://yasushi-masuda.github.io/fukui-toyama-trip-2026/`）を案内
-- **Next**: Owner による GitHub Pages 有効化
+  - `index.html` のモデルタイムラインを更新：
+    - 1日目昼: 福井名物 越前そば（谷川/亀蔵）または ソースカツ丼
+    - 2日目朝: 【朝の鮎】石田おとり店（勝山・九頭竜川の炭火焼き天然鮎）
+  - `.ai/PROJECT.md` を更新
+  - GitHub へコミット＆プッシュ実行（GitHub Pages へ即時反映）
+- **Next**: GitHub Pages 公開の確認
