@@ -56,3 +56,23 @@ tasks:
       - "セキュリティ・個人情報（予約番号等）のマスク完了"
       - "GitHub リポジトリ設定と push 完了、Pages 有効化手順の案内完了"
     notes: "main ブランチへの push 成功"
+
+  - id: T-005
+    title: "立山黒部アルペンルート予約確定に伴う旅程・Web栞の全面更新"
+    status: done
+    priority: P1
+    deps: ["T-004"]
+    owner_role: "org-architect"
+    allowed_paths:
+      - "index.html"
+      - ".ai/PROJECT.md"
+      - ".ai/DASHBOARD.md"
+      - ".ai/DECISIONS.md"
+    acceptance:
+      - "1日目: 東尋坊 ➔ 恐竜博物館 ➔ 越前大仏 ➔ 片町夜ご飯のタイムラインへ更新"
+      - "2日目: 10:00福井発 ➔ 13:25立山駅着 ➔ 13:40立山〜室堂往復 ➔ スパ・アルプス ➔ 富山外食 ➔ Airbnbへのタイムライン更新"
+      - "3日目: 富山湾・市内観光・すし玉 ➔ 16:00返却 ➔ 17:29新幹線への最適化"
+      - "index.html のタイムライン、Google Mapsリンク、天気予報等の整合性更新"
+      - "PROJECT.md, DASHBOARD.md, DECISIONS.md の更新"
+    notes: "立山駅13:40発便（室堂往復）予約対応"
+
