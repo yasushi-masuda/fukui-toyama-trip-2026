@@ -93,4 +93,23 @@ tasks:
       - "GitHub へのコミット＆プッシュ（GitHub Pages 反映）"
     notes: "東尋坊から勝山への移動ルート上で九頭竜川の天然鮎塩焼きを満喫"
 
+  - id: T-007
+    title: "2日目昼食（立山サンダーバードのジビエおにぎり）＆3日目高岡・雨晴・新湊内川・親水公園ルート反映"
+    status: done
+    priority: P1
+    deps: ["T-006"]
+    owner_role: "org-architect"
+    allowed_paths:
+      - "index.html"
+      - ".ai/PROJECT.md"
+      - ".ai/DASHBOARD.md"
+      - ".ai/DECISIONS.md"
+    acceptance:
+      - "2日目昼: 立山サンダーバード（ジビエおにぎり・名物サンド）をアルペンルート前に組み込み"
+      - "3日目: 高岡城跡(11時) ➔ 山町筋・金屋町(散策＆昼食) ➔ 雨晴海岸(立山連峰眺望) ➔ 新湊内川(日本のベニス) ➔ 富岩運河環水公園(親水公園・世界一のスタバ) への全面更新"
+      - "index.html（タイムライン、候補地、マップリンク）、PROJECT.md、DECISIONS.md、DASHBOARD.md、STATUS.md の更新"
+      - "GitHub へのコミット＆プッシュ（GitHub Pages 反映）"
+    notes: "Owner要望の富山湾・高岡文化巡り＆立山サンダーバードグルメ反映"
+
+
 
