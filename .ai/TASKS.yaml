@@ -76,3 +76,21 @@ tasks:
       - "PROJECT.md, DASHBOARD.md, DECISIONS.md の更新"
     notes: "立山駅13:40発便（室堂往復）予約対応"
 
+  - id: T-006
+    title: "初日1日目：恐竜博物館前の石田おとり店（おやつ鮎塩焼き）タイムライン組み込み"
+    status: done
+    priority: P1
+    deps: ["T-005"]
+    owner_role: "org-architect"
+    allowed_paths:
+      - "index.html"
+      - ".ai/PROJECT.md"
+      - ".ai/DASHBOARD.md"
+      - ".ai/DECISIONS.md"
+    acceptance:
+      - "1日目タイムライン: 東尋坊(昼食) ➔ 石田おとり店(おやつ鮎) ➔ 恐竜博物館 ➔ 越前大仏 ➔ アパホテル(サウナ) ➔ 片町夜ご飯 への更新"
+      - "index.html, PROJECT.md, DECISIONS.md, DASHBOARD.md, STATUS.md の更新"
+      - "GitHub へのコミット＆プッシュ（GitHub Pages 反映）"
+    notes: "東尋坊から勝山への移動ルート上で九頭竜川の天然鮎塩焼きを満喫"
+
+
